@@ -47,7 +47,18 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .navbar-brand span, .footer-brand span { display: flex; flex-direction: column; line-height: 1; }
 .navbar-brand strong, .footer-brand strong { font-family: var(--heading); font-size: 1.1rem; letter-spacing: .09em; }
 .navbar-brand small, .footer-brand small { margin-top: 5px; font-size: .57rem; letter-spacing: .32em; }
-.nav-logo { object-fit: contain; }
+/*
+   Logo navbar memakai bidang putih karena detail hitam pada logo
+   akan sulit terlihat jika langsung diletakkan di atas navbar gelap.
+*/
+.nav-logo {
+  padding: 3px;
+  object-fit: contain;
+  background: var(--white);
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 50%;
+  box-shadow: 0 3px 12px rgba(0,0,0,.24);
+}
 .nav-link { margin: 0 .35rem; color: rgba(255,255,255,.76); font-size: .83rem; font-weight: 500; }
 .nav-link:hover, .nav-link.active { color: var(--white); }
 
