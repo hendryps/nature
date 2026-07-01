@@ -430,3 +430,117 @@ Kedua gambar menggunakan format WebP yang telah dioptimalkan untuk website.
 - Akun Instagram resmi
 - Lokasi atau Google Maps
 - Ketentuan usia dan iuran anggota
+
+## 15. Panduan Maintenance
+
+Website ini dibuat menggunakan HTML, CSS, JavaScript vanilla, dan Bootstrap.
+Tidak ada framework atau proses build yang harus dipelajari.
+
+### 15.1 Urutan file yang perlu dipahami
+
+1. `index.html` berisi seluruh teks dan susunan halaman.
+2. `css/style.css` mengatur warna, ukuran, jarak, dan tampilan.
+3. `js/main.js` mengatur tautan formulir dan interaksi halaman.
+4. `assets/web/` menyimpan gambar yang digunakan website.
+5. `vercel.json` berisi pengaturan deployment Vercel.
+
+Setiap bagian pada ketiga file kode sudah dilengkapi komentar berbahasa
+Indonesia.
+
+### 15.2 Mengganti teks website
+
+Buka `index.html`, kemudian cari teks yang ingin diganti. Bagian halaman
+dipisahkan oleh komentar besar, misalnya:
+
+```html
+<!-- PROGRAM DAN KEGIATAN -->
+```
+
+Teks dapat diganti langsung di antara tanda pembuka dan penutup HTML.
+
+Contoh awal:
+
+```html
+<h3>Nama Ketua</h3>
+```
+
+Setelah diperbarui:
+
+```html
+<h3>Hendry Sitorus</h3>
+```
+
+Jangan menghapus tanda `<`, `>`, atau `/` di sekitar teks.
+
+### 15.3 Mengganti tautan pendaftaran
+
+Buka `js/main.js`, kemudian cari:
+
+```js
+const registrationUrl =
+```
+
+Ganti alamat Google Form di bawahnya. Semua tombol pendaftaran otomatis
+menggunakan alamat tersebut.
+
+### 15.4 Mengganti warna utama
+
+Buka `css/style.css`, kemudian cari bagian `:root`. Warna utama berada pada:
+
+```css
+--red: #c91c2d;
+--red-dark: #8f0e1c;
+--red-deep: #5e0711;
+```
+
+Gunakan kode warna dengan format `#RRGGBB`.
+
+### 15.5 Mengganti gambar
+
+Gambar website tersimpan dalam folder `assets/web/`:
+
+- `logo-nature.webp` adalah logo organisasi.
+- `nature-toba.webp` adalah gambar Danau Toba.
+
+Cara paling mudah mengganti gambar adalah memakai nama file dan format yang
+sama sehingga `index.html` tidak perlu diubah.
+
+Gunakan format WebP dan usahakan setiap gambar berukuran di bawah 300 KB agar
+website tetap cepat.
+
+### 15.6 Membuka website di komputer
+
+Klik dua kali `index.html` untuk membukanya langsung di browser.
+
+Jika menggunakan Visual Studio Code, ekstensi Live Server dapat digunakan:
+
+1. Klik kanan `index.html`.
+2. Pilih **Open with Live Server**.
+
+### 15.7 Pemeriksaan sebelum dipublikasikan
+
+- Buka `index.html` di Google Chrome.
+- Periksa tampilan pada komputer dan ponsel.
+- Klik seluruh menu navigasi.
+- Buka dan tutup setiap FAQ.
+- Pastikan tombol pendaftaran membuka Google Form yang benar.
+- Pastikan tidak ada gambar yang hilang.
+- Periksa ejaan dan nama pengurus.
+
+### 15.8 Deployment production
+
+Website dipublikasikan melalui Vercel. Deployment manual dapat dilakukan
+dengan perintah:
+
+```bash
+npx vercel --prod
+```
+
+### 15.9 Checklist pembaruan
+
+- Periksa ejaan dan nama pengurus.
+- Pastikan tautan pendaftaran dapat dibuka.
+- Gunakan gambar yang jelas dan ringan.
+- Periksa tampilan desktop dan ponsel.
+- Commit dan push perubahan ke GitHub.
+- Deploy ulang ke Vercel.
