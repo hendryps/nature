@@ -305,27 +305,81 @@
             <p>Susunan sementara untuk kebutuhan tampilan. Data resmi akan segera diperbarui.</p>
           </div>
 
-          <!-- Pengurus inti. -->
+          <!--
+            BAGAN ORGANISASI
+            Urutan setiap "org-level" menunjukkan tingkat jabatan.
+            Garis penghubung antarjabatan dibuat melalui css/style.css.
+          -->
           <div class="org-chart mt-5">
-            <div class="row justify-content-center g-3">
-              <div class="col-6 col-md-3"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Pembina</span><h3>Nama Pembina</h3></article></div>
-              <div class="col-6 col-md-3"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Penasihat</span><h3>Nama Penasihat</h3></article></div>
-              <div class="col-6 col-md-4 col-lg-2"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Ketua</span><h3>Nama Ketua</h3></article></div>
-              <div class="col-6 col-md-4 col-lg-2"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Wakil Ketua</span><h3>Nama Wakil Ketua</h3></article></div>
-              <div class="col-6 col-md-4 col-lg-2"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Sekretaris</span><h3>Nama Sekretaris</h3></article></div>
-              <div class="col-6 col-md-4 col-lg-2"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Bendahara</span><h3>Nama Bendahara</h3></article></div>
+            <!-- Tingkat 1: pembina dan penasihat organisasi. -->
+            <div class="org-level org-level-advisors">
+              <article class="org-card org-card-advisor">
+                <div class="avatar"><i class="bi bi-person"></i></div>
+                <span>Pembina</span>
+                <h3>Nama Pembina</h3>
+              </article>
+              <article class="org-card org-card-advisor">
+                <div class="avatar"><i class="bi bi-person"></i></div>
+                <span>Penasihat</span>
+                <h3>Nama Penasihat</h3>
+              </article>
             </div>
 
-            <!-- Garis pemisah antara pengurus inti dan koordinator. -->
-            <div class="divider-label"><span>Koordinator Bidang</span></div>
+            <!-- Tingkat 2: ketua sebagai pimpinan utama. -->
+            <div class="org-connector" aria-hidden="true"></div>
+            <div class="org-level">
+              <article class="org-card org-card-primary">
+                <div class="avatar"><i class="bi bi-person"></i></div>
+                <span>Ketua</span>
+                <h3>Nama Ketua</h3>
+              </article>
+            </div>
 
-            <!-- Koordinator setiap bidang. -->
-            <div class="row justify-content-center g-3">
-              <div class="col-6 col-md-4 col-lg"><article class="division-card"><i class="bi bi-people-fill"></i><span>Bidang</span><h3>Kerohanian</h3><small>Nama Koordinator</small></article></div>
-              <div class="col-6 col-md-4 col-lg"><article class="division-card"><i class="bi bi-people-fill"></i><span>Bidang</span><h3>Adat & Budaya</h3><small>Nama Koordinator</small></article></div>
-              <div class="col-6 col-md-4 col-lg"><article class="division-card"><i class="bi bi-people-fill"></i><span>Bidang</span><h3>Olahraga</h3><small>Nama Koordinator</small></article></div>
-              <div class="col-6 col-md-4 col-lg"><article class="division-card"><i class="bi bi-people-fill"></i><span>Bidang</span><h3>Sosial</h3><small>Nama Koordinator</small></article></div>
-              <div class="col-6 col-md-4 col-lg"><article class="division-card"><i class="bi bi-people-fill"></i><span>Bidang</span><h3>Humas & Dokumentasi</h3><small>Nama Koordinator</small></article></div>
+            <!-- Tingkat 3: wakil ketua. -->
+            <div class="org-connector" aria-hidden="true"></div>
+            <div class="org-level">
+              <article class="org-card org-card-secondary">
+                <div class="avatar"><i class="bi bi-person"></i></div>
+                <span>Wakil Ketua</span>
+                <h3>Nama Wakil Ketua</h3>
+              </article>
+            </div>
+
+            <!-- Tingkat 4: sekretaris dan bendahara. -->
+            <div class="org-branch org-branch-two" aria-hidden="true"></div>
+            <div class="org-level org-level-two">
+              <article class="org-card">
+                <div class="avatar"><i class="bi bi-journal-text"></i></div>
+                <span>Sekretaris</span>
+                <h3>Nama Sekretaris</h3>
+              </article>
+              <article class="org-card">
+                <div class="avatar"><i class="bi bi-wallet2"></i></div>
+                <span>Bendahara</span>
+                <h3>Nama Bendahara</h3>
+              </article>
+            </div>
+
+            <!-- Tingkat 5: seluruh koordinator bidang. -->
+            <div class="org-connector org-connector-long" aria-hidden="true"></div>
+            <div class="org-division-label"><span>Koordinator Bidang</span></div>
+            <div class="org-branch org-branch-five" aria-hidden="true"></div>
+            <div class="org-level org-level-divisions">
+              <article class="org-card division-card">
+                <i class="bi bi-book"></i><span>Bidang</span><h3>Kerohanian</h3><small>Nama Koordinator</small>
+              </article>
+              <article class="org-card division-card">
+                <i class="bi bi-flower1"></i><span>Bidang</span><h3>Adat & Budaya</h3><small>Nama Koordinator</small>
+              </article>
+              <article class="org-card division-card">
+                <i class="bi bi-trophy"></i><span>Bidang</span><h3>Olahraga</h3><small>Nama Koordinator</small>
+              </article>
+              <article class="org-card division-card">
+                <i class="bi bi-heart"></i><span>Bidang</span><h3>Sosial</h3><small>Nama Koordinator</small>
+              </article>
+              <article class="org-card division-card">
+                <i class="bi bi-camera"></i><span>Bidang</span><h3>Humas & Dokumentasi</h3><small>Nama Koordinator</small>
+              </article>
             </div>
           </div>
         </div>

@@ -126,14 +126,34 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 
 /* STRUKTUR ORGANISASI */
 .organization-section { background: var(--cream); }
-.person-card, .division-card { height: 100%; padding: 24px 12px; text-align: center; background: var(--white); border-bottom: 3px solid transparent; transition: .25s ease; }
-.person-card:hover, .division-card:hover { border-color: var(--red); transform: translateY(-4px); }
+.org-chart { --org-line: #cbbeb5; position: relative; max-width: 1100px; margin-right: auto; margin-left: auto; }
+.org-level { position: relative; z-index: 2; display: flex; justify-content: center; gap: 24px; }
+.org-level-advisors { gap: 34px; }
+.org-level-two .org-card { width: 230px; }
+.org-level-divisions { gap: 12px; }
+.org-card { width: 210px; min-height: 160px; padding: 24px 15px; text-align: center; background: var(--white); border-top: 3px solid transparent; box-shadow: 0 8px 24px rgba(50,35,30,.06); transition: .25s ease; }
+.org-card:hover { border-color: var(--red); box-shadow: 0 14px 30px rgba(90,30,35,.12); transform: translateY(-4px); }
+.org-card-primary { color: var(--white); background: var(--red-dark); border-color: var(--red-dark); }
+.org-card-primary .avatar { color: var(--red-dark); background: var(--white); }
+.org-card-primary span { color: rgba(255,255,255,.72); }
+.org-card-secondary { border-color: var(--red); }
+.org-card-advisor { border-color: #b7a89f; }
 .avatar { display: grid; width: 62px; height: 62px; margin: 0 auto 16px; color: var(--red); background: #f6e7e8; border-radius: 50%; place-items: center; }
 .avatar i { font-size: 1.7rem; }
-.person-card span, .division-card span { color: var(--red); font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.person-card h3, .division-card h3 { margin: 6px 0 0; font-family: var(--body); font-size: .78rem; font-weight: 600; }
-.divider-label { display: flex; align-items: center; gap: 18px; margin: 34px 0 24px; color: var(--muted); font-size: .66rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
-.divider-label::before, .divider-label::after { height: 1px; background: #ded3cb; content: ''; flex: 1; }
+.org-card span, .division-card span { color: var(--red); font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.org-card h3, .division-card h3 { margin: 6px 0 0; font-family: var(--body); font-size: .78rem; font-weight: 600; }
+.org-card-primary h3 { color: var(--white); }
+.org-connector { width: 2px; height: 32px; margin: 0 auto; background: var(--org-line); }
+.org-connector-long { height: 38px; }
+.org-branch { position: relative; height: 32px; margin: 0 auto; border-top: 2px solid var(--org-line); }
+.org-branch::before, .org-branch::after { position: absolute; top: -2px; width: 2px; height: 32px; background: var(--org-line); content: ''; }
+.org-branch::before { left: 0; }
+.org-branch::after { right: 0; }
+.org-branch-two { width: 254px; }
+.org-branch-five { width: calc(80% + 2px); }
+.org-division-label { display: flex; justify-content: center; margin: -12px 0 18px; }
+.org-division-label span { position: relative; z-index: 3; padding: 7px 15px; color: var(--red); font-size: .62rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; background: var(--cream); border: 1px solid var(--org-line); }
+.org-level-divisions .org-card { width: calc(20% - 10px); min-height: 145px; }
 .division-card > i { display: block; margin-bottom: 14px; color: var(--red); font-size: 1.4rem; }
 .division-card small { color: var(--muted); font-size: .62rem; }
 
@@ -213,7 +233,11 @@ footer i { margin-right: 8px; color: #e94b5a; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .logo-stage { max-width: 440px; margin: 0 auto; }
   .activity-card p { min-height: 72px; }
-  .org-chart { max-width: 760px; margin-right: auto; margin-left: auto; }
+  .org-chart { max-width: 760px; }
+  .org-level-divisions { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .org-level-divisions .org-card { width: 100%; }
+  .org-branch-five { display: none; }
+  .org-division-label { margin: 0 0 18px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .join-panel { padding: 50px 38px; }
   footer { padding-top: 65px; }
@@ -242,7 +266,19 @@ footer i { margin-right: 8px; color: #e94b5a; }
   .logo-stage { padding: 20px; }
   .meaning-list { grid-template-columns: 1fr; }
   .activity-card p { min-height: auto; }
-  .person-card, .division-card { padding: 22px 10px; }
+  /*
+     Pada ponsel bagan berubah menjadi alur vertikal.
+     Garis berada di tengah dan setiap kartu disusun dari atas ke bawah.
+  */
+  .org-chart { max-width: 430px; }
+  .org-level, .org-level-advisors, .org-level-two, .org-level-divisions { display: flex; flex-direction: column; gap: 14px; align-items: center; }
+  .org-card, .org-level-two .org-card, .org-level-divisions .org-card { width: min(100%, 300px); min-height: auto; padding: 20px 14px; }
+  .org-branch, .org-branch-five { display: block; width: 2px; height: 28px; border: 0; background: var(--org-line); }
+  .org-branch::before, .org-branch::after { display: none; }
+  .org-connector, .org-connector-long { height: 28px; }
+  .org-division-label { margin: 0 0 14px; }
+  .avatar { width: 54px; height: 54px; margin-bottom: 12px; }
+  .division-card { padding: 22px 10px; }
   .gallery-grid { grid-auto-rows: 210px; }
   .gallery-main { grid-column: span 2; grid-row: span 2; }
   .join-panel { padding: 42px 24px; }
@@ -276,7 +312,7 @@ footer i { margin-right: 8px; color: #e94b5a; }
 @media (max-width: 359.98px) {
   .container { --bs-gutter-x: 1.4rem; }
   .hero h1 { font-size: 2.85rem; }
-  .organization-section .col-6 { width: 100%; }
+  .org-card { width: 100%; }
 }
 
 /* Mengurangi animasi bagi pengguna yang memilih mode minim gerakan */
