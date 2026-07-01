@@ -175,8 +175,7 @@ beriman, berbudaya, serta berdampak positif bagi anggota dan masyarakat.
 
 ### 7.4 Makna Logo
 
-Bagian ini menampilkan logo beserta penjelasan unsur-unsurnya berdasarkan
-dokumen resmi **Makna Lambang Nature**:
+Bagian ini menampilkan logo beserta penjelasan unsur-unsurnya:
 
 - Warna merah
 - Warna putih
@@ -186,8 +185,8 @@ dokumen resmi **Makna Lambang Nature**:
 - Rumah adat
 - Tunas bunga
 
-> Teks penjelasan setiap unsur akan diambil dari dokumen resmi dan tidak
-> menggunakan interpretasi baru.
+> Teks penjelasan setiap unsur masih bersifat sementara dan akan disesuaikan
+> setelah materi resmi organisasi tersedia.
 
 ### 7.5 Program dan Kegiatan
 
@@ -389,15 +388,12 @@ tidak diarahkan ke informasi palsu.
 - Mendukung browser modern.
 - Aset gambar menggunakan format dan ukuran yang telah dioptimalkan.
 
-## 11. Aset yang Tersedia
+## 11. Aset yang Digunakan Website
 
-- `Logo (Black) New Nature Jabodetabek.png`
-- `Logo (White) New Nature Jabodetabek.png`
-- `Logo Nature Toba.jpg`
-- `Makna Lambang Nature.pdf`
+- `assets/web/logo-nature.webp`
+- `assets/web/nature-toba.webp`
 
-Logo PNG berukuran besar dan harus dioptimalkan untuk web tanpa mengubah
-identitas visual aslinya.
+Kedua gambar menggunakan format WebP yang telah dioptimalkan untuk website.
 
 ## 12. Pengembangan Berikutnya
 
