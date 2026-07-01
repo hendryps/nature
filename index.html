@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <!-- Pengaturan dasar agar karakter dan tampilan ponsel bekerja dengan benar. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Informasi website untuk mesin pencari dan saat tautan dibagikan. -->
+    <title>NATURE Jabodetabek</title>
+    <meta
+      name="description"
+      content="Website resmi NATURE Jabodetabek, wadah Naposobulung Sitorus, Boru, Bere, dan Ibebere di wilayah Jabodetabek."
+    />
+    <meta name="theme-color" content="#a71120" />
+    <meta property="og:title" content="NATURE Jabodetabek" />
+    <meta property="og:description" content="Bersatu dalam kekeluargaan, bertumbuh dalam budaya." />
+    <meta property="og:type" content="website" />
+
+    <!-- Bootstrap menyediakan susunan responsif dan komponen siap pakai. -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons menyediakan ikon seperti panah, orang, dan media sosial. -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Tampilan khusus NATURE. Ubah warna dan ukuran melalui file ini. -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- =========================================================
+         NAVIGASI UTAMA
+         href="#tentang" menuju bagian yang memiliki id="tentang".
+         ========================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" aria-label="Navigasi utama">
+      <div class="container">
+        <!-- Logo dan nama organisasi di sebelah kiri. -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#beranda" aria-label="NATURE Jabodetabek">
+          <img class="nav-logo" src="assets/web/logo-nature.webp" width="46" height="46" alt="" />
+          <span><strong>NATURE</strong><small>JABODETABEK</small></span>
+        </a>
+
+        <!-- Tombol menu yang muncul pada layar ponsel. -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Buka navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Daftar menu utama. -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kegiatan">Kegiatan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#struktur">Pengurus</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item ms-lg-3">
+              <!--
+                Semua tombol pendaftaran memakai class "registration-link".
+                Alamat Google Form diatur satu kali melalui js/main.js.
+              -->
+              <a class="btn btn-light btn-sm px-3 registration-link" href="#" target="_blank" rel="noopener">
+                Gabung Sekarang
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- =========================================================
+           HERO
+           Bagian pertama yang dilihat pengunjung.
+           ========================================================= -->
+      <section class="hero" id="beranda">
+        <!-- Pola hias pada latar belakang. -->
+        <div class="hero-pattern" aria-hidden="true"></div>
+
+        <div class="container position-relative">
+          <div class="row align-items-center min-vh-100 py-5">
+            <!-- Judul dan tombol utama. -->
+            <div class="col-lg-7 hero-copy">
+              <span class="eyebrow">Horas! Selamat datang di</span>
+              <h1>NATURE<br /><em>Jabodetabek</em></h1>
+              <p class="hero-subtitle">Naposobulung Sitorus Boru Bere Jabodetabek</p>
+              <p class="hero-tagline">Bersatu dalam kekeluargaan.<br />Bertumbuh dalam budaya.</p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a class="btn btn-primary btn-lg registration-link" href="#" target="_blank" rel="noopener">
+                  Gabung Sekarang <i class="bi bi-arrow-up-right ms-2"></i>
+                </a>
+                <a class="btn btn-outline-light btn-lg" href="#kegiatan">
+                  Lihat Kegiatan <i class="bi bi-arrow-down ms-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Logo besar hanya ditampilkan pada layar komputer. -->
+            <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+              <div class="hero-emblem">
+                <img
+                  src="assets/web/logo-nature.webp"
+                  alt="Logo NATURE Jabodetabek"
+                  width="480"
+                  height="480"
+                  fetchpriority="high"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Petunjuk untuk menggulir halaman. -->
+        <a href="#tentang" class="scroll-cue" aria-label="Gulir ke bagian tentang">
+          <span>Jelajahi</span><i class="bi bi-arrow-down"></i>
+        </a>
+      </section>
+
+      <!-- =========================================================
+           TENTANG, VISI, MISI, DAN NILAI ORGANISASI
+           ========================================================= -->
+      <section class="section about-section" id="tentang">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <!-- Deskripsi singkat organisasi. -->
+            <div class="col-lg-6">
+              <span class="section-kicker">Tentang Kami</span>
+              <h2>Rumah untuk bertumbuh<br />dan berjalan bersama.</h2>
+              <p class="lead">
+                NATURE Jabodetabek adalah wadah kebersamaan Naposobulung Sitorus, Boru, Bere,
+                dan Ibebere di Jakarta, Bogor, Depok, Tangerang, dan Bekasi.
+              </p>
+              <p>
+                Berawal dari semangat generasi muda untuk memiliki ruang kebersamaan, NATURE
+                hadir untuk mempererat hubungan kekeluargaan, menumbuhkan kepedulian, serta
+                menjaga nilai budaya Batak melalui kegiatan kerohanian, olahraga, sosial, dan budaya.
+              </p>
+            </div>
+
+            <!-- Kartu visi dan misi. -->
+            <div class="col-lg-6">
+              <div class="vision-card">
+                <span class="card-number">01</span>
+                <h3>Visi Kami</h3>
+                <p>
+                  Menjadi wadah generasi muda Sitorus, Boru, Bere, dan Ibebere yang solid,
+                  beriman, berbudaya, serta berdampak positif bagi anggota dan masyarakat.
+                </p>
+                <hr />
+                <h3>Misi Kami</h3>
+                <ul class="check-list">
+                  <li>Mempererat persaudaraan dan rasa kekeluargaan.</li>
+                  <li>Menumbuhkan iman dan karakter melalui persekutuan.</li>
+                  <li>Melestarikan serta memperkenalkan budaya Batak.</li>
+                  <li>Mengembangkan potensi anggota melalui kegiatan bersama.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enam nilai utama organisasi. -->
+          <div class="values-grid mt-5 pt-lg-4">
+            <article class="value-item">
+              <i class="bi bi-people"></i>
+              <div><h3>Kekeluargaan</h3><p>Saling menghargai, merangkul, dan mendukung sebagai satu keluarga.</p></div>
+            </article>
+            <article class="value-item">
+              <i class="bi bi-book"></i>
+              <div><h3>Iman</h3><p>Bertumbuh bersama dengan nilai kerohanian sebagai landasan.</p></div>
+            </article>
+            <article class="value-item">
+              <i class="bi bi-link-45deg"></i>
+              <div><h3>Kebersamaan</h3><p>Aktif berpartisipasi dan bekerja sama dalam setiap kegiatan.</p></div>
+            </article>
+            <article class="value-item">
+              <i class="bi bi-flower1"></i>
+              <div><h3>Budaya</h3><p>Menjaga dan meneruskan identitas serta nilai luhur budaya Batak.</p></div>
+            </article>
+            <article class="value-item">
+              <i class="bi bi-heart"></i>
+              <div><h3>Kepedulian</h3><p>Peka terhadap kebutuhan anggota dan masyarakat sekitar.</p></div>
+            </article>
+            <article class="value-item">
+              <i class="bi bi-shield-check"></i>
+              <div><h3>Integritas</h3><p>Jujur, bertanggung jawab, dan dapat dipercaya.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           MAKNA LOGO
+           Teks masih sementara dan dapat diganti setelah data resmi ada.
+           ========================================================= -->
+      <section class="section logo-section" id="makna-logo">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <!-- Gambar lambang organisasi. -->
+            <div class="col-lg-5 text-center">
+              <div class="logo-stage">
+                <img src="assets/web/logo-nature.webp" alt="Lambang NATURE Jabodetabek" width="430" height="430" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- Daftar arti warna dan unsur lambang. -->
+            <div class="col-lg-7">
+              <span class="section-kicker text-white-50">Identitas Kami</span>
+              <h2>Makna di balik lambang.</h2>
+              <p class="logo-intro">
+                Setiap warna dan unsur membawa nilai yang menjadi bagian dari perjalanan NATURE.
+              </p>
+              <div class="meaning-list">
+                <div><span class="color-dot red"></span><strong>Merah</strong><p>Semangat, keberanian, dan kekuatan.</p></div>
+                <div><span class="color-dot white"></span><strong>Putih</strong><p>Ketulusan, kesucian, dan kejujuran.</p></div>
+                <div><span class="color-dot black"></span><strong>Hitam</strong><p>Keteguhan, kebijaksanaan, dan wibawa.</p></div>
+                <div><i class="bi bi-bezier2"></i><strong>Gorga & Huruf N</strong><p>Identitas budaya dan kesatuan NATURE.</p></div>
+                <div><i class="bi bi-house-heart"></i><strong>Rumah Adat</strong><p>Rumah kebersamaan dan akar kekeluargaan.</p></div>
+                <div><i class="bi bi-flower2"></i><strong>Tunas Bunga</strong><p>Harapan untuk terus tumbuh dan berkembang.</p></div>
+              </div>
+              <small class="content-note">Penjelasan sementara — akan disesuaikan dengan dokumen resmi.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           PROGRAM DAN KEGIATAN
+           Salin satu kolom kartu jika ingin menambah kegiatan baru.
+           ========================================================= -->
+      <section class="section activities-section" id="kegiatan">
+        <div class="container">
+          <div class="section-heading text-center mx-auto">
+            <span class="section-kicker">Ruang Kebersamaan</span>
+            <h2>Program & Kegiatan</h2>
+            <p>Berjumpa, bertumbuh, dan merawat budaya melalui kegiatan yang bermakna.</p>
+          </div>
+
+          <div class="row g-4 mt-4">
+            <!-- Kegiatan 1: Ibadah Bulanan. -->
+            <div class="col-md-6 col-xl-3">
+              <article class="activity-card h-100">
+                <span class="activity-number">01</span><i class="bi bi-heart-pulse"></i>
+                <h3>Ibadah Bulanan</h3>
+                <p>Ruang untuk bertumbuh dalam iman melalui doa, pujian, renungan, dan persekutuan bersama.</p>
+                <span class="soon-label">Agenda segera hadir</span>
+              </article>
+            </div>
+
+            <!-- Kegiatan 2: Olahraga. -->
+            <div class="col-md-6 col-xl-3">
+              <article class="activity-card h-100">
+                <span class="activity-number">02</span><i class="bi bi-trophy"></i>
+                <h3>Olahraga</h3>
+                <p>Aktivitas olahraga bersama untuk menjaga kesehatan dan mempererat hubungan antaranggota.</p>
+                <span class="soon-label">Agenda segera hadir</span>
+              </article>
+            </div>
+
+            <!-- Kegiatan 3: Perayaan Natal. -->
+            <div class="col-md-6 col-xl-3">
+              <article class="activity-card h-100">
+                <span class="activity-number">03</span><i class="bi bi-stars"></i>
+                <h3>Perayaan Natal</h3>
+                <p>Perayaan penuh syukur melalui ibadah, pujian, kebersamaan, dan pelayanan sosial.</p>
+                <span class="soon-label">Agenda segera hadir</span>
+              </article>
+            </div>
+
+            <!-- Kegiatan 4: Gondang Naposo. -->
+            <div class="col-md-6 col-xl-3">
+              <article class="activity-card h-100">
+                <span class="activity-number">04</span><i class="bi bi-music-note-beamed"></i>
+                <h3>Gondang Naposo</h3>
+                <p>Perjumpaan generasi muda melalui musik, tarian, dan tradisi untuk menjaga budaya Batak.</p>
+                <span class="soon-label">Agenda segera hadir</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           STRUKTUR ORGANISASI
+           Ganti teks "Nama ..." saat data pengurus resmi tersedia.
+           ========================================================= -->
+      <section class="section organization-section" id="struktur">
+        <div class="container">
+          <div class="section-heading text-center mx-auto">
+            <span class="section-kicker">Pelayan Organisasi</span>
+            <h2>Struktur Organisasi</h2>
+            <p>Susunan sementara untuk kebutuhan tampilan. Data resmi akan segera diperbarui.</p>
+          </div>
+
+          <!-- Pengurus inti. -->
+          <div class="org-chart mt-5">
+            <div class="row justify-content-center g-3">
+              <div class="col-6 col-md-3"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Pembina</span><h3>Nama Pembina</h3></article></div>
+              <div class="col-6 col-md-3"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Penasihat</span><h3>Nama Penasihat</h3></article></div>
+              <div class="col-6 col-md-4 col-lg-2"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Ketua</span><h3>Nama Ketua</h3></article></div>
+              <div class="col-6 col-md-4 col-lg-2"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Wakil Ketua</span><h3>Nama Wakil Ketua</h3></article></div>
+              <div class="col-6 col-md-4 col-lg-2"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Sekretaris</span><h3>Nama Sekretaris</h3></article></div>
+              <div class="col-6 col-md-4 col-lg-2"><article class="person-card"><div class="avatar"><i class="bi bi-person"></i></div><span>Bendahara</span><h3>Nama Bendahara</h3></article></div>
+            </div>
+
+            <!-- Garis pemisah antara pengurus inti dan koordinator. -->
+            <div class="divider-label"><span>Koordinator Bidang</span></div>
+
+            <!-- Koordinator setiap bidang. -->
+            <div class="row justify-content-center g-3">
+              <div class="col-6 col-md-4 col-lg"><article class="division-card"><i class="bi bi-people-fill"></i><span>Bidang</span><h3>Kerohanian</h3><small>Nama Koordinator</small></article></div>
+              <div class="col-6 col-md-4 col-lg"><article class="division-card"><i class="bi bi-people-fill"></i><span>Bidang</span><h3>Adat & Budaya</h3><small>Nama Koordinator</small></article></div>
+              <div class="col-6 col-md-4 col-lg"><article class="division-card"><i class="bi bi-people-fill"></i><span>Bidang</span><h3>Olahraga</h3><small>Nama Koordinator</small></article></div>
+              <div class="col-6 col-md-4 col-lg"><article class="division-card"><i class="bi bi-people-fill"></i><span>Bidang</span><h3>Sosial</h3><small>Nama Koordinator</small></article></div>
+              <div class="col-6 col-md-4 col-lg"><article class="division-card"><i class="bi bi-people-fill"></i><span>Bidang</span><h3>Humas & Dokumentasi</h3><small>Nama Koordinator</small></article></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           GALERI
+           Ganti kotak placeholder dengan foto kegiatan setelah tersedia.
+           ========================================================= -->
+      <section class="section gallery-section" id="galeri">
+        <div class="container">
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-5">
+            <div><span class="section-kicker">Cerita dalam Gambar</span><h2 class="mb-0">Galeri Kegiatan</h2></div>
+            <p class="gallery-copy mb-0">Dokumentasi perjalanan dan momen kebersamaan kami.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <!-- Gambar utama galeri. -->
+            <figure class="gallery-main">
+              <img src="assets/web/nature-toba.webp" alt="Pemandangan Danau Toba dan lambang NATURE" width="1100" height="619" loading="lazy" />
+              <figcaption><span>Identitas & Budaya</span><strong>NATURE Jabodetabek</strong></figcaption>
+            </figure>
+
+            <!-- Placeholder dokumentasi kegiatan. -->
+            <div class="gallery-placeholder"><i class="bi bi-heart-pulse"></i><span>Dokumentasi</span><strong>Ibadah Bulanan</strong><small>Segera hadir</small></div>
+            <div class="gallery-placeholder"><i class="bi bi-trophy"></i><span>Dokumentasi</span><strong>Olahraga</strong><small>Segera hadir</small></div>
+            <div class="gallery-placeholder"><i class="bi bi-stars"></i><span>Dokumentasi</span><strong>Perayaan Natal</strong><small>Segera hadir</small></div>
+            <div class="gallery-placeholder"><i class="bi bi-music-note-beamed"></i><span>Dokumentasi</span><strong>Gondang Naposo</strong><small>Segera hadir</small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           CARA BERGABUNG
+           Tombol pendaftaran diarahkan melalui js/main.js.
+           ========================================================= -->
+      <section class="section join-section" id="bergabung">
+        <div class="container">
+          <div class="join-panel">
+            <div class="row align-items-center g-5">
+              <!-- Ajakan bergabung. -->
+              <div class="col-lg-5">
+                <span class="section-kicker text-white-50">Menjadi Bagian dari Kami</span>
+                <h2>Mari bertumbuh<br />bersama NATURE.</h2>
+                <p>Isi formulir pendaftaran dan pengurus kami akan menghubungi kamu untuk proses selanjutnya.</p>
+                <a class="btn btn-light btn-lg mt-3 registration-link" href="#" target="_blank" rel="noopener">
+                  Isi Formulir Pendaftaran <i class="bi bi-arrow-up-right ms-2"></i>
+                </a>
+              </div>
+
+              <!-- Urutan proses pendaftaran. -->
+              <div class="col-lg-7">
+                <ol class="join-steps">
+                  <li><span>01</span>Isi formulir</li>
+                  <li><span>02</span>Verifikasi pengurus</li>
+                  <li><span>03</span>Dihubungi pengurus</li>
+                  <li><span>04</span>Masuk grup WhatsApp</li>
+                  <li><span>05</span>Ikuti kegiatan perdana</li>
+                  <li><span>06</span>Resmi menjadi anggota</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           FAQ / PERTANYAAN UMUM
+           Bootstrap mengatur fungsi buka-tutup setiap jawaban.
+           ========================================================= -->
+      <section class="section faq-section" id="faq">
+        <div class="container">
+          <div class="row g-5">
+            <!-- Judul FAQ. -->
+            <div class="col-lg-4">
+              <span class="section-kicker">Pertanyaan Umum</span>
+              <h2>Yang sering ditanyakan.</h2>
+              <p>Belum menemukan jawaban? Hubungi pengurus melalui kanal resmi kami.</p>
+            </div>
+
+            <!-- Daftar pertanyaan. -->
+            <div class="col-lg-8">
+              <div class="accordion accordion-flush" id="faqAccordion">
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1">Siapa yang boleh bergabung?</button></h3>
+                  <div id="faq-1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Naposobulung Sitorus, Boru, Bere, dan Ibebere yang berdomisili atau beraktivitas di wilayah Jabodetabek.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2">Apakah harus bermarga Sitorus?</button></h3>
+                  <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Tidak. Boru, Bere, dan Ibebere dari keluarga besar Sitorus juga dapat bergabung sesuai ketentuan organisasi.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3">Apakah ada batas usia untuk bergabung?</button></h3>
+                  <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Ketentuan usia mengikuti kebijakan resmi organisasi. Isi formulir terlebih dahulu agar pengurus dapat memberikan informasi lebih lanjut.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4">Apakah ada iuran anggota?</button></h3>
+                  <div id="faq-4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Ketentuan iuran akan dijelaskan oleh pengurus setelah proses pendaftaran dan verifikasi.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5">Apakah saya harus tinggal di Jakarta?</button></h3>
+                  <div id="faq-5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Tidak. Keanggotaan ditujukan bagi yang berdomisili atau aktif di wilayah Jabodetabek.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6">Bagaimana cara mengikuti kegiatan?</button></h3>
+                  <div id="faq-6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Informasi jadwal dan lokasi kegiatan dibagikan melalui kanal komunikasi resmi organisasi.</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+         Ganti teks kontak setelah informasi resmi tersedia.
+         ========================================================= -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <!-- Identitas organisasi. -->
+          <div class="col-lg-5">
+            <a class="footer-brand d-flex align-items-center gap-3" href="#beranda">
+              <img src="assets/web/logo-nature.webp" width="68" height="68" alt="" loading="lazy" />
+              <span><strong>NATURE</strong><small>JABODETABEK</small></span>
+            </a>
+            <p class="mt-3">Naposobulung Sitorus Boru Bere Jabodetabek</p>
+          </div>
+
+          <!-- Tautan cepat. -->
+          <div class="col-6 col-lg-3">
+            <h2>Navigasi</h2>
+            <a href="#tentang">Tentang Kami</a>
+            <a href="#kegiatan">Kegiatan</a>
+            <a href="#struktur">Struktur</a>
+            <a href="#galeri">Galeri</a>
+          </div>
+
+          <!-- Kontak sementara. -->
+          <div class="col-6 col-lg-4">
+            <h2>Kontak</h2>
+            <span><i class="bi bi-whatsapp"></i> WhatsApp segera hadir</span>
+            <span><i class="bi bi-instagram"></i> Instagram segera hadir</span>
+            <span><i class="bi bi-envelope"></i> Email segera hadir</span>
+          </div>
+        </div>
+
+        <!-- Tahun akan diperbarui otomatis oleh JavaScript. -->
+        <div class="footer-bottom">
+          <span>© <span id="currentYear"></span> NATURE Jabodetabek</span>
+          <span>Dibangun untuk kebersamaan & budaya.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Tombol ini muncul setelah halaman digulir cukup jauh. -->
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Bootstrap dibutuhkan oleh menu ponsel dan FAQ. -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript khusus website NATURE. -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

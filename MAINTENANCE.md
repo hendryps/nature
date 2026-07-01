@@ -1,53 +1,56 @@
 # Panduan Maintenance Website
 
-Panduan ini ditujukan bagi pengelola yang belum terbiasa dengan Astro.
+Website ini dibuat dengan HTML, CSS, JavaScript, dan Bootstrap. Tidak ada
+framework atau proses build yang harus dipelajari.
 
-## File yang paling sering diubah
+## Urutan file yang perlu dipahami
 
-| Kebutuhan | File |
-|---|---|
-| Mengganti teks, kegiatan, FAQ, atau nama pengurus | `src/pages/index.astro` |
-| Mengganti warna, ukuran, atau tampilan | `src/styles/global.css` |
-| Mengganti logo utama | `src/assets/logo-nature.png` |
-| Mengganti gambar Danau Toba | `src/assets/nature-toba.jpg` |
-| Mengganti pengaturan deployment | `vercel.json` |
+1. `index.html` berisi seluruh teks dan susunan halaman.
+2. `css/style.css` mengatur warna, ukuran, jarak, dan tampilan.
+3. `js/main.js` mengatur tautan formulir dan interaksi halaman.
+4. `assets/web/` menyimpan gambar yang digunakan website.
+5. `vercel.json` berisi pengaturan deployment Vercel.
 
-## Mengganti konten
+Setiap bagian pada ketiga file kode sudah dilengkapi komentar berbahasa
+Indonesia.
 
-Buka `src/pages/index.astro`, lalu cari bagian:
+## Mengganti teks website
 
-```text
-DATA YANG SERING DIUBAH
+Buka `index.html`, kemudian cari teks yang ingin diganti. Bagian halaman
+dipisahkan oleh komentar besar seperti:
+
+```html
+<!-- PROGRAM DAN KEGIATAN -->
 ```
 
-Pada bagian tersebut terdapat:
+Teks dapat diganti langsung di antara tanda pembuka dan penutup HTML. Contoh:
 
-- `registrationUrl` untuk alamat formulir pendaftaran.
-- `activities` untuk daftar kegiatan.
-- `values` untuk nilai organisasi.
-- `leaders` untuk pengurus inti.
-- `divisions` untuk bidang organisasi.
-- `faqs` untuk pertanyaan umum.
+```html
+<h3>Nama Ketua</h3>
+```
 
-Pastikan tanda kutip, koma, dan kurung tetap lengkap saat mengganti teks.
+Menjadi:
 
-## Mengganti nama pengurus
+```html
+<h3>Hendry Sitorus</h3>
+```
 
-Contoh data awal:
+Jangan menghapus tanda `<`, `>`, atau `/` di sekitar teks.
+
+## Mengganti tautan pendaftaran
+
+Buka `js/main.js`, lalu cari:
 
 ```js
-['Ketua', 'Nama Ketua']
+const registrationUrl =
 ```
 
-Ganti menjadi:
-
-```js
-['Ketua', 'Nama Pengurus']
-```
+Ganti alamat Google Form di bawahnya. Semua tombol pendaftaran otomatis
+menggunakan alamat tersebut.
 
 ## Mengganti warna utama
 
-Buka `src/styles/global.css`, lalu cari `:root`. Warna utama berada pada:
+Buka `css/style.css`, lalu cari bagian `:root`. Warna utama berada pada:
 
 ```css
 --red: #c91c2d;
@@ -57,40 +60,42 @@ Buka `src/styles/global.css`, lalu cari `:root`. Warna utama berada pada:
 
 Gunakan kode warna dengan format `#RRGGBB`.
 
-## Menjalankan website di komputer
+## Mengganti gambar
 
-Instal dependensi satu kali:
+Gambar website tersimpan dalam folder `assets/web/`:
 
-```bash
-npm install
-```
+- `logo-nature.webp` adalah logo organisasi.
+- `nature-toba.webp` adalah gambar Danau Toba.
 
-Jalankan mode pengembangan:
+Cara paling mudah mengganti gambar adalah memakai nama file dan format yang
+sama. Dengan cara ini, `index.html` tidak perlu diubah.
 
-```bash
-npm run dev
-```
+Gunakan gambar WebP agar website tetap cepat. Usahakan setiap gambar berukuran
+di bawah 300 KB.
 
-Astro akan menampilkan alamat lokal yang dapat dibuka melalui browser.
+## Membuka website di komputer
+
+Klik dua kali `index.html` untuk membukanya langsung di browser.
+
+Jika memakai Visual Studio Code, ekstensi Live Server juga dapat digunakan:
+
+1. Klik kanan `index.html`.
+2. Pilih **Open with Live Server**.
 
 ## Memeriksa sebelum dipublikasikan
 
-Jalankan:
-
-```bash
-npm run build
-```
-
-Jika perintah selesai tanpa error, hasil website akan tersedia di folder
-`dist`.
+- Buka `index.html` di Google Chrome.
+- Periksa tampilan pada komputer dan ponsel.
+- Klik seluruh menu navigasi.
+- Buka dan tutup setiap FAQ.
+- Pastikan tombol pendaftaran membuka Google Form yang benar.
+- Pastikan tidak ada gambar yang hilang.
+- Periksa ejaan dan nama pengurus.
 
 ## Deployment production
 
-Website dipublikasikan melalui Vercel. Jika repository GitHub sudah terhubung
-ke Vercel, setiap perubahan yang di-push ke branch `main` akan dibangun dan
-dipublikasikan secara otomatis.
-
-Untuk deployment manual melalui terminal:
+Website dipublikasikan melalui Vercel. Deployment manual dapat dilakukan
+dengan perintah:
 
 ```bash
 npx vercel --prod
@@ -100,7 +105,7 @@ npx vercel --prod
 
 - Periksa ejaan dan nama pengurus.
 - Pastikan tautan pendaftaran dapat dibuka.
-- Gunakan gambar yang jelas tetapi tidak terlalu besar.
+- Gunakan gambar yang jelas dan ringan.
 - Periksa tampilan desktop dan ponsel.
-- Jalankan `npm run build`.
 - Commit dan push perubahan ke GitHub.
+- Deploy ulang ke Vercel.
