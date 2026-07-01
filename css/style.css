@@ -191,12 +191,26 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .accordion-body { padding: 0 4px 24px; color: var(--muted); font-size: .85rem; }
 
 /* FOOTER DAN TOMBOL KEMBALI KE ATAS */
-footer { padding: 75px 0 25px; color: rgba(255,255,255,.62); text-align: center; background: #151111; }
-.footer-brand { justify-content: center; color: var(--white); }
+footer { padding: 75px 0 25px; color: rgba(255,255,255,.62); text-align: left; background: #151111; }
+footer > .container > .row { align-items: flex-start; }
+.footer-brand { justify-content: flex-start; width: fit-content; color: var(--white); }
+/*
+   Logo footer memakai bidang putih agar bagian hitam pada logo
+   tidak menyatu dengan background footer yang gelap.
+*/
+.footer-brand img {
+  padding: 4px;
+  object-fit: contain;
+  background: var(--white);
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 50%;
+  box-shadow: 0 5px 18px rgba(0,0,0,.3);
+}
 footer h2 { color: var(--white); font-family: var(--body); font-size: .72rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
 footer a, footer .col-lg-4 span { display: block; margin: 8px 0; color: rgba(255,255,255,.6); font-size: .78rem; }
 footer a:hover { color: var(--white); }
 footer i { margin-right: 8px; color: #e94b5a; }
+/* Hanya baris copyright paling bawah yang diletakkan di tengah. */
 .footer-bottom { display: flex; justify-content: center; gap: 28px; margin-top: 55px; padding-top: 22px; font-size: .65rem; text-align: center; border-top: 1px solid rgba(255,255,255,.1); }
 .back-to-top { position: fixed; z-index: 20; right: 20px; bottom: 20px; display: grid; width: 44px; height: 44px; color: var(--white); border: 0; background: var(--red); opacity: 0; pointer-events: none; transition: .25s; place-items: center; transform: translateY(15px); }
 .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
