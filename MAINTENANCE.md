@@ -10,7 +10,7 @@ Panduan ini ditujukan bagi pengelola yang belum terbiasa dengan Astro.
 | Mengganti warna, ukuran, atau tampilan | `src/styles/global.css` |
 | Mengganti logo utama | `src/assets/logo-nature.png` |
 | Mengganti gambar Danau Toba | `src/assets/nature-toba.jpg` |
-| Mengganti pengaturan deployment | `netlify.toml` |
+| Mengganti pengaturan deployment | `vercel.json` |
 
 ## Mengganti konten
 
@@ -83,6 +83,18 @@ npm run build
 
 Jika perintah selesai tanpa error, hasil website akan tersedia di folder
 `dist`.
+
+## Deployment production
+
+Website dipublikasikan melalui Vercel. Jika repository GitHub sudah terhubung
+ke Vercel, setiap perubahan yang di-push ke branch `main` akan dibangun dan
+dipublikasikan secara otomatis.
+
+Untuk deployment manual melalui terminal:
+
+```bash
+npx vercel --prod
+```
 
 ## Checklist pembaruan
 

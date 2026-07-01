@@ -94,7 +94,7 @@ website tidak memerlukan backend maupun database.
 | Interaksi | Vanilla JavaScript |
 | Font | Cinzel dan Poppins |
 | Formulir | Google Forms |
-| Hosting | GitHub Pages atau Netlify |
+| Hosting | Vercel |
 
 ## 6. Struktur Halaman
 
