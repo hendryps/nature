@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* ============================================================
+   WARNA DAN FONT UTAMA
+   Ubah nilai di bawah jika identitas visual organisasi berubah.
+   Perubahan di sini otomatis digunakan oleh seluruh halaman.
+   ============================================================ */
 :root {
   --red: #c91c2d;
   --red-dark: #8f0e1c;
@@ -13,6 +18,7 @@
   --body: 'Poppins', Arial, sans-serif;
 }
 
+/* Pengaturan dasar untuk seluruh halaman */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 82px; }
 body { margin: 0; color: var(--ink); background: var(--white); font-family: var(--body); line-height: 1.7; }
@@ -28,6 +34,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .btn-lg { padding: .9rem 1.45rem; font-size: .9rem; }
 .btn-primary { --bs-btn-bg: var(--red); --bs-btn-border-color: var(--red); --bs-btn-hover-bg: #a90f20; --bs-btn-hover-border-color: #a90f20; }
 
+/* NAVIGASI: menu tetap berada di atas saat halaman digulir */
 .navbar { padding: 16px 0; transition: .3s ease; }
 .navbar.scrolled { padding: 9px 0; background: rgba(18, 9, 10, .96); box-shadow: 0 10px 30px rgba(0, 0, 0, .15); backdrop-filter: blur(12px); }
 .navbar-brand span, .footer-brand span { display: flex; flex-direction: column; line-height: 1; }
@@ -37,6 +44,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .nav-link { margin: 0 .35rem; color: rgba(255,255,255,.76); font-size: .83rem; font-weight: 500; }
 .nav-link:hover, .nav-link.active { color: var(--white); }
 
+/* HERO: bagian pembuka dengan judul besar dan logo */
 .hero { position: relative; min-height: 760px; overflow: hidden; color: var(--white); background: linear-gradient(115deg, rgba(36,5,9,.98) 0%, rgba(101,6,20,.96) 54%, rgba(188,16,37,.9) 100%), url('../assets/nature-toba.jpg') center/cover; }
 .hero::after { position: absolute; right: -12%; bottom: -45%; width: 760px; height: 760px; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; content: ''; box-shadow: 0 0 0 90px rgba(255,255,255,.025), 0 0 0 180px rgba(255,255,255,.02); }
 .hero-pattern { position: absolute; inset: 0; opacity: .1; background-image: linear-gradient(30deg, transparent 40%, rgba(255,255,255,.18) 41%, transparent 42%), linear-gradient(150deg, transparent 40%, rgba(255,255,255,.14) 41%, transparent 42%); background-size: 54px 94px; }
@@ -50,6 +58,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .hero-emblem img { width: 100%; height: auto; }
 .scroll-cue { position: absolute; z-index: 3; bottom: 30px; left: 50%; display: flex; gap: 14px; align-items: center; color: rgba(255,255,255,.65); font-size: .68rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; transform: translateX(-50%); }
 
+/* TENTANG: visi, misi, dan nilai organisasi */
 .about-section { background: var(--cream); }
 .about-section .lead { margin: 28px 0 18px; color: var(--ink); font-size: 1.15rem; font-weight: 500; }
 .about-section p:not(.lead) { color: var(--muted); }
@@ -67,6 +76,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .value-item h3 { margin: 0 0 7px; font-size: .94rem; letter-spacing: .03em; }
 .value-item p { margin: 0; font-size: .8rem; line-height: 1.6; }
 
+/* MAKNA LOGO: bagian berlatar gelap */
 .logo-section { color: var(--white); background: #171313; }
 .logo-stage { position: relative; padding: 36px; }
 .logo-stage::before { position: absolute; inset: 10%; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; content: ''; box-shadow: 0 0 0 35px rgba(255,255,255,.015), 0 0 0 70px rgba(255,255,255,.015); }
@@ -81,6 +91,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .color-dot.red { background: #cf1f31; }.color-dot.white { background: #fff; }.color-dot.black { background: #080808; }
 .content-note { color: rgba(255,255,255,.4); }
 
+/* KEGIATAN: kartu berubah merah ketika disentuh kursor */
 .activities-section { background: #fff; }
 .activity-card { position: relative; padding: 34px 28px; overflow: hidden; border: 1px solid var(--line); transition: .3s ease; }
 .activity-card:hover { color: var(--white); border-color: var(--red); background: var(--red); transform: translateY(-8px); box-shadow: 0 20px 45px rgba(148,17,31,.18); }
@@ -91,6 +102,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .activity-card p { min-height: 110px; color: var(--muted); font-size: .82rem; }
 .soon-label { color: var(--red); font-size: .65rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 
+/* STRUKTUR ORGANISASI */
 .organization-section { background: var(--cream); }
 .person-card, .division-card { height: 100%; padding: 24px 12px; text-align: center; background: var(--white); border-bottom: 3px solid transparent; transition: .25s ease; }
 .person-card:hover, .division-card:hover { border-color: var(--red); transform: translateY(-4px); }
@@ -103,6 +115,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .division-card > i { display: block; margin-bottom: 14px; color: var(--red); font-size: 1.4rem; }
 .division-card small { color: var(--muted); font-size: .62rem; }
 
+/* GALERI: satu gambar utama dan empat kotak dokumentasi */
 .gallery-section { background: #fff; }
 .gallery-copy { max-width: 390px; color: var(--muted); }
 .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 260px; gap: 12px; }
@@ -118,6 +131,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .gallery-placeholder strong { margin: 5px 0; font-family: var(--heading); font-size: .9rem; }
 .gallery-placeholder small { color: #aaa; font-size: .65rem; }
 
+/* PENDAFTARAN: ajakan bergabung dan urutan prosesnya */
 .join-section { padding-top: 40px; background: #fff; }
 .join-panel { position: relative; padding: 70px; overflow: hidden; color: var(--white); background: linear-gradient(120deg, var(--red-deep), var(--red)); }
 .join-panel::after { position: absolute; top: -260px; right: -180px; width: 620px; height: 620px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; content: ''; box-shadow: 0 0 0 65px rgba(255,255,255,.035), 0 0 0 130px rgba(255,255,255,.025); }
@@ -127,12 +141,14 @@ h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; 
 .join-steps li { display: flex; gap: 14px; align-items: center; padding: 16px; color: rgba(255,255,255,.83); font-size: .8rem; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.05); }
 .join-steps span { color: #ff9ca5; font-family: var(--heading); font-size: .68rem; }
 
+/* FAQ: menggunakan komponen accordion dari Bootstrap */
 .faq-section { background: var(--cream); }
 .faq-section p { color: var(--muted); }
 .accordion { --bs-accordion-bg: transparent; --bs-accordion-border-color: #ddd2ca; --bs-accordion-active-color: var(--red); --bs-accordion-active-bg: transparent; --bs-accordion-btn-focus-box-shadow: none; }
 .accordion-button { padding: 24px 4px; font-family: var(--heading); font-size: .95rem; }
 .accordion-body { padding: 0 4px 24px; color: var(--muted); font-size: .85rem; }
 
+/* FOOTER DAN TOMBOL KEMBALI KE ATAS */
 footer { padding: 75px 0 25px; color: rgba(255,255,255,.62); background: #151111; }
 .footer-brand { color: var(--white); }
 footer h2 { color: var(--white); font-family: var(--body); font-size: .72rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
@@ -143,6 +159,10 @@ footer i { margin-right: 8px; color: #e94b5a; }
 .back-to-top { position: fixed; z-index: 20; right: 20px; bottom: 20px; display: grid; width: 44px; height: 44px; color: var(--white); border: 0; background: var(--red); opacity: 0; pointer-events: none; transition: .25s; place-items: center; transform: translateY(15px); }
 .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
+/*
+   TAMPILAN TABLET
+   Aturan ini aktif saat lebar layar maksimal sekitar 992 piksel.
+*/
 @media (max-width: 991.98px) {
   .navbar { background: rgba(18,9,10,.96); }
   .navbar-collapse { padding: 18px 0 10px; }
@@ -153,6 +173,7 @@ footer i { margin-right: 8px; color: #e94b5a; }
   .join-panel { padding: 50px 38px; }
 }
 
+/* TAMPILAN PONSEL */
 @media (max-width: 767.98px) {
   .section { padding: 78px 0; }
   .hero h1 { font-size: clamp(3.2rem, 16vw, 5rem); }
@@ -169,6 +190,7 @@ footer i { margin-right: 8px; color: #e94b5a; }
   .footer-bottom { flex-direction: column; gap: 7px; }
 }
 
+/* TAMPILAN PONSEL KECIL */
 @media (max-width: 420px) {
   .hero .btn { width: 100%; }
   .gallery-grid { grid-template-columns: 1fr; }
@@ -176,6 +198,7 @@ footer i { margin-right: 8px; color: #e94b5a; }
   .organization-section .col-6 { width: 100%; }
 }
 
+/* Mengurangi animasi bagi pengguna yang memilih mode minim gerakan */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }

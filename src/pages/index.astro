@@ -6,9 +6,17 @@ import { Image } from 'astro:assets';
 import logo from '../assets/logo-nature.png';
 import toba from '../assets/nature-toba.jpg';
 
+// ============================================================
+// DATA YANG SERING DIUBAH
+// Ubah isi pada bagian ini untuk memperbarui konten website.
+// Tidak perlu mengubah bagian HTML di bawah jika hanya mengganti teks.
+// ============================================================
+
+// Alamat formulir pendaftaran. Semua tombol "Gabung" memakai alamat ini.
 const registrationUrl =
   'https://docs.google.com/forms/d/e/1FAIpQLSf8TGiAw-wUbm_OG9bWwzGSvICBt7h2Cdnxr6zoirLbCSncwg/viewform';
 
+// Daftar program/kegiatan. Tambah atau hapus satu blok untuk mengubah kartu kegiatan.
 const activities = [
   {
     icon: 'bi-heart-pulse',
@@ -32,6 +40,7 @@ const activities = [
   }
 ];
 
+// Nilai organisasi yang tampil pada bagian Tentang Kami.
 const values = [
   ['bi-people', 'Kekeluargaan', 'Saling menghargai, merangkul, dan mendukung sebagai satu keluarga.'],
   ['bi-book', 'Iman', 'Bertumbuh bersama dengan nilai kerohanian sebagai landasan.'],
@@ -41,6 +50,7 @@ const values = [
   ['bi-shield-check', 'Integritas', 'Jujur, bertanggung jawab, dan dapat dipercaya.']
 ];
 
+// Pengurus inti. Ganti "Nama ..." dengan nama pengurus yang sebenarnya.
 const leaders = [
   ['Pembina', 'Nama Pembina'],
   ['Penasihat', 'Nama Penasihat'],
@@ -50,6 +60,7 @@ const leaders = [
   ['Bendahara', 'Nama Bendahara']
 ];
 
+// Daftar bidang organisasi. Nama koordinator masih menggunakan teks sementara.
 const divisions = [
   'Kerohanian',
   'Adat & Budaya',
@@ -58,6 +69,7 @@ const divisions = [
   'Humas & Dokumentasi'
 ];
 
+// Pertanyaan dan jawaban pada bagian FAQ.
 const faqs = [
   ['Siapa yang boleh bergabung?', 'Naposobulung Sitorus, Boru, Bere, dan Ibebere yang berdomisili atau beraktivitas di wilayah Jabodetabek.'],
   ['Apakah harus bermarga Sitorus?', 'Tidak. Boru, Bere, dan Ibebere dari keluarga besar Sitorus juga dapat bergabung sesuai ketentuan organisasi.'],
@@ -84,6 +96,10 @@ const faqs = [
     <title>NATURE Jabodetabek</title>
   </head>
   <body>
+    <!--
+      NAVIGASI UTAMA
+      href="#tentang" akan membawa pengunjung ke bagian yang memiliki id="tentang".
+    -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" aria-label="Navigasi utama">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#beranda" aria-label="NATURE Jabodetabek">
@@ -119,6 +135,7 @@ const faqs = [
     </nav>
 
     <main>
+      <!-- HERO: tampilan pertama yang dilihat pengunjung -->
       <section class="hero" id="beranda">
         <div class="hero-pattern" aria-hidden="true"></div>
         <div class="container position-relative">
@@ -156,6 +173,7 @@ const faqs = [
         </a>
       </section>
 
+      <!-- TENTANG: deskripsi, visi, misi, dan nilai organisasi -->
       <section class="section about-section" id="tentang">
         <div class="container">
           <div class="row g-5 align-items-center">
@@ -206,6 +224,7 @@ const faqs = [
         </div>
       </section>
 
+      <!-- MAKNA LOGO: ganti teks sementara setelah penjelasan resmi tersedia -->
       <section class="section logo-section" id="makna-logo">
         <div class="container">
           <div class="row g-5 align-items-center">
@@ -234,6 +253,7 @@ const faqs = [
         </div>
       </section>
 
+      <!-- KEGIATAN: isi kartu dibuat otomatis dari daftar activities di atas -->
       <section class="section activities-section" id="kegiatan">
         <div class="container">
           <div class="section-heading text-center mx-auto">
@@ -257,6 +277,7 @@ const faqs = [
         </div>
       </section>
 
+      <!-- STRUKTUR: pengurus inti dan koordinator bidang -->
       <section class="section organization-section" id="struktur">
         <div class="container">
           <div class="section-heading text-center mx-auto">
@@ -293,6 +314,7 @@ const faqs = [
         </div>
       </section>
 
+      <!-- GALERI: gambar utama tersedia, gambar kegiatan masih berupa placeholder -->
       <section class="section gallery-section" id="galeri">
         <div class="container">
           <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-5">
@@ -319,6 +341,7 @@ const faqs = [
         </div>
       </section>
 
+      <!-- CARA BERGABUNG: tombol membuka Google Forms di tab baru -->
       <section class="section join-section" id="bergabung">
         <div class="container">
           <div class="join-panel">
@@ -352,6 +375,7 @@ const faqs = [
         </div>
       </section>
 
+      <!-- FAQ: pertanyaan dibuat otomatis dari daftar faqs di atas -->
       <section class="section faq-section" id="faq">
         <div class="container">
           <div class="row g-5">
@@ -392,6 +416,7 @@ const faqs = [
       </section>
     </main>
 
+    <!-- FOOTER: ganti teks kontak setelah WhatsApp, Instagram, dan email resmi tersedia -->
     <footer>
       <div class="container">
         <div class="row g-5">
@@ -428,12 +453,15 @@ const faqs = [
     </button>
 
     <script>
+      // Memuat fungsi Bootstrap untuk menu mobile dan accordion FAQ.
       import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+      // Mengambil elemen yang akan diberi interaksi.
       const nav = document.querySelector('#mainNav');
       const backToTop = document.querySelector('#backToTop');
       const menu = document.querySelector('#navbarMenu');
 
+      // Mengubah tampilan navbar saat halaman digulir dan menampilkan tombol "ke atas".
       const updateScrollState = () => {
         const scrolled = window.scrollY > 40;
         nav?.classList.toggle('scrolled', scrolled);
@@ -443,8 +471,10 @@ const faqs = [
       updateScrollState();
       window.addEventListener('scroll', updateScrollState, { passive: true });
 
+      // Mengembalikan pengunjung ke bagian paling atas halaman.
       backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
+      // Menutup menu mobile secara otomatis setelah salah satu menu dipilih.
       menu?.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener('click', () => {
           const collapse = window.bootstrap?.Collapse.getInstance(menu);
@@ -452,6 +482,7 @@ const faqs = [
         });
       });
 
+      // Memberi tanda aktif pada menu sesuai bagian halaman yang sedang terlihat.
       const sections = document.querySelectorAll('main section[id]');
       const links = document.querySelectorAll('.navbar-nav .nav-link');
       const observer = new IntersectionObserver(
