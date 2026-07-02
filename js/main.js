@@ -1,7 +1,7 @@
 /*
   FILE INTERAKSI WEBSITE
   File ini menangani tautan pendaftaran, navbar, menu ponsel,
-  tombol kembali ke atas, penanda menu aktif, dan tahun footer.
+  tombol kembali ke atas, dan penanda menu aktif.
 */
 
 // ============================================================
@@ -82,9 +82,3 @@ const sectionObserver = new IntersectionObserver(
 pageSections.forEach((section) => {
   sectionObserver.observe(section);
 });
-
-// Menampilkan tahun saat ini pada footer agar tidak perlu diganti setiap tahun.
-const currentYear = document.querySelector('#currentYear');
-if (currentYear) {
-  currentYear.textContent = new Date().getFullYear();
-}

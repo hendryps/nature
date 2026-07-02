@@ -1,63 +1,87 @@
 # NATURE Jabodetabek
 
-Website resmi **Naposobulung Sitorus Boru Bere Jabodetabek**.
+Website resmi **Naposo Sitorus Boru Bere Jabodetabek (NATURE)**.
 
-[Buka website production](https://nature-mocha-one.vercel.app)
+Production: [https://naposo-sitorus.vercel.app](https://naposo-sitorus.vercel.app)
+
+## Fitur
+
+- Profil, visi, misi, nilai, dan sejarah NATURE
+- Makna lambang organisasi
+- Program dan kegiatan
+- Struktur organisasi periode 2025-2027
+- Galeri kegiatan
+- Alur dan formulir pendaftaran
+- FAQ, email, WhatsApp, Instagram, dan TikTok
+- Layout responsif untuk desktop, tablet, dan mobile
+- Metadata Open Graph dan JSON-LD organisasi
 
 ## Teknologi
 
 - HTML5
-- CSS3
+- CSS3 dan Bootstrap 5
 - JavaScript vanilla
-- Bootstrap 5
+- Bootstrap Icons
+- Google Fonts
 - Vercel
 
-Website ini tidak menggunakan framework atau proses build. Seluruh source code
-dapat dibaca dan diubah secara langsung.
+Website ini tidak menggunakan framework, package manager, database, atau proses
+build. Seluruh source dapat diedit langsung.
 
-## Struktur proyek
+## Struktur Proyek
 
 ```text
-nature/
-├── assets/
-│   └── web/             # Logo dan gambar website
-├── css/
-│   └── style.css        # Warna, layout, dan tampilan responsif
-├── js/
-│   └── main.js          # Interaksi dan tautan pendaftaran
-├── index.html           # Isi dan struktur halaman utama
-├── PRD_Website_NATURE_Jabodetabek_Static.md
-├── robots.txt
-└── vercel.json
+.
+|-- assets/
+|   `-- web/
+|       |-- logo-nature.webp
+|       |-- nature-toba.webp
+|       `-- photo-dummy.svg
+|-- css/
+|   `-- style.css
+|-- js/
+|   `-- main.js
+|-- index.html
+|-- PRD.md
+|-- README.md
+|-- robots.txt
+`-- vercel.json
 ```
 
-## Menjalankan secara lokal
+## Menjalankan Secara Lokal
 
-Cara paling sederhana adalah membuka `index.html` melalui Google Chrome.
+Karena berupa website statis, `index.html` dapat dibuka langsung di browser.
+Untuk pengembangan, gunakan Live Server atau server statis lokal agar perilaku
+tautan dan aset sama dengan production.
 
-Jika menggunakan Visual Studio Code:
+## Pemeliharaan
 
-1. Instal ekstensi **Live Server**.
-2. Klik kanan `index.html`.
-3. Pilih **Open with Live Server**.
+- Konten, nama, kontak, dan struktur pengurus: `index.html`
+- Warna, layout, dan breakpoint responsif: `css/style.css`
+- Tautan Google Forms dan interaksi: `js/main.js`
+- Logo, hero, dan foto pengurus: `assets/web/`
+- Konfigurasi deployment dan header: `vercel.json`
 
-## Mengubah website
+Foto pengurus saat ini menggunakan `assets/web/photo-dummy.svg`. Saat foto asli
+tersedia, simpan hasil optimasi di `assets/web/`, ubah atribut `src`, lalu isi
+atribut `alt` dengan nama orang yang bersangkutan.
 
-- Konten dan nama pengurus: `index.html`
-- Warna dan tampilan: `css/style.css`
-- Tautan Google Forms: `js/main.js`
-- Logo dan gambar: `assets/web/`
+## Kontak Resmi
 
-Seluruh kode telah dilengkapi komentar berbahasa Indonesia. Panduan maintenance
-lengkap tersedia pada bagian 15 di
-[`PRD_Website_NATURE_Jabodetabek_Static.md`](PRD_Website_NATURE_Jabodetabek_Static.md).
-
-## Formulir pendaftaran
-
-[Google Forms Pendaftaran Anggota](https://docs.google.com/forms/d/e/1FAIpQLSf8TGiAw-wUbm_OG9bWwzGSvICBt7h2Cdnxr6zoirLbCSncwg/viewform)
+- Email: `naposositorusjabodetabek@gmail.com`
+- WhatsApp: `0812 6542 3393`
+- WhatsApp: `0813 7086 2282`
+- Instagram: `@naposo_sitorusjabodetabek`
+- TikTok: `@naposo_sitorusjbdtk`
 
 ## Deployment
 
-Website production menggunakan Vercel:
+Repository GitHub: [hendryps/nature](https://github.com/hendryps/nature)
 
-[https://nature-mocha-one.vercel.app](https://nature-mocha-one.vercel.app)
+Deployment production menggunakan proyek Vercel `naposo-sitorus`:
+
+```powershell
+npx vercel --prod
+```
+
+Spesifikasi produk dan checklist pemeliharaan tersedia di [PRD.md](PRD.md).

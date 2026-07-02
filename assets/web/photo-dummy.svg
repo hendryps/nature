@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">Foto profil sementara</title>
+  <rect width="160" height="160" fill="#eee7e1"/>
+  <circle cx="80" cy="61" r="30" fill="#b9ada5"/>
+  <path d="M25 153c4-37 25-58 55-58s51 21 55 58" fill="#b9ada5"/>
+  <circle cx="80" cy="80" r="74" fill="none" stroke="#c91c2d" stroke-width="4"/>
+</svg>
