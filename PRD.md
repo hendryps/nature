@@ -10,7 +10,7 @@
 | Status | Implemented |
 | Periode pengurus | 2025-2027 |
 | Jenis | Static single-page website |
-| Production | https://naposo-sitorus-hendry1.vercel.app |
+| Production | https://naposositorus.vercel.app |
 
 ## 1. Ringkasan
 

@@ -2,7 +2,7 @@
 
 Website resmi **Naposo Sitorus Boru Bere Jabodetabek (NATURE)**.
 
-Production: [https://naposo-sitorus-hendry1.vercel.app](https://naposo-sitorus-hendry1.vercel.app)
+Production: [https://naposositorus.vercel.app](https://naposositorus.vercel.app)
 
 ## Fitur
 
@@ -78,7 +78,7 @@ atribut `alt` dengan nama orang yang bersangkutan.
 
 Repository GitHub: [hendryps/nature](https://github.com/hendryps/nature)
 
-Deployment production menggunakan proyek Vercel `naposo-sitorus`:
+Deployment production menggunakan proyek Vercel `naposositorus`:
 
 ```powershell
 npx vercel --prod
