@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Foto profil sementara">
+  <rect width="160" height="160" fill="#f0e0ea"/>
+  <path d="M20 160C23 126 46 108 80 108S137 126 140 160Z" fill="#355070"/>
+  <path d="M66 109Q80 124 94 109" fill="none" stroke="#c98f68" stroke-width="7"/>
+  <g fill="#1d1716"><circle cx="80" cy="28" r="15"/><path d="M52 70C50 40 64 34 80 34C96 34 110 40 108 70Z"/></g>
+  <rect x="69" y="88" width="22" height="24" rx="8" fill="#c98f68"/>
+  <rect x="69" y="92" width="22" height="8" fill="#000" opacity=".08"/>
+  <circle cx="53" cy="71" r="6" fill="#c98f68"/><circle cx="107" cy="71" r="6" fill="#c98f68"/>
+  <ellipse cx="80" cy="68" rx="27" ry="31" fill="#c98f68"/>
+  <g fill="#2b1d18"><ellipse cx="70" cy="71" rx="2.6" ry="3"/><ellipse cx="90" cy="71" rx="2.6" ry="3"/></g>
+  <g fill="none" stroke="#1d1716" stroke-width="1.8" stroke-linecap="round"><path d="M64 63Q70 59 76 63"/><path d="M84 63Q90 59 96 63"/></g>
+  <path d="M80 74Q77 80 80 82" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#e46d74" opacity=".22"><circle cx="64" cy="81" r="5"/><circle cx="96" cy="81" r="5"/></g>
+  <path d="M73 87Q80 93 87 87Q80 89 73 87Z" fill="#b8434d"/>
+  <g fill="#1d1716"><path d="M53 72C50 40 64 33 80 33C96 33 110 40 107 72C104 56 96 44 80 42C64 44 56 56 53 72Z"/></g>
+  <g fill="#c9c9cf"><circle cx="53" cy="80" r="2.6"/><circle cx="107" cy="80" r="2.6"/></g>
+</svg>

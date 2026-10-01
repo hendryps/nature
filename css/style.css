@@ -4,8 +4,6 @@
   Bootstrap menangani susunan dasar; file ini memberi identitas visual NATURE.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
-
 /* ============================================================
    WARNA DAN FONT UTAMA
    Ubah nilai di bawah jika identitas visual organisasi berubah.
@@ -34,7 +32,8 @@ img { max-width: 100%; height: auto; }
 h1, h2, h3 { font-family: var(--heading); }
 h2 { font-size: clamp(2rem, 4vw, 3.45rem); font-weight: 700; line-height: 1.15; letter-spacing: -.03em; }
 .section { padding: 110px 0; }
-.section-kicker, .eyebrow { display: inline-block; margin-bottom: 16px; color: var(--red); font-size: .74rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.section-kicker, .eyebrow { display: inline-block; margin-bottom: 16px; font-size: .74rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.section-kicker { color: var(--red); }
 .section-heading { max-width: 710px; }
 .section-heading p { color: var(--muted); font-size: 1.05rem; }
 .btn { border-radius: 2px; font-weight: 600; }

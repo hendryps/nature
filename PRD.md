@@ -135,7 +135,8 @@ Divisi Dana & Usaha:
 - Nopi Manalu
 - Novlin Claudi Sitorus
 
-Foto pengurus masih memakai placeholder lokal dan akan diganti secara manual.
+Foto pengurus masih memakai avatar ilustrasi sementara di `assets/web/pengurus/`
+(satu file unik per orang, dinamai sesuai nama) dan akan diganti secara manual.
 
 ## 6. Kontak dan Integrasi
 
@@ -232,8 +233,9 @@ Sebelum publikasi:
 
 Untuk mengganti foto dummy:
 
-1. Simpan foto teroptimasi di `assets/web/`.
-2. Ganti `src="assets/web/photo-dummy.svg"` pada anggota terkait.
+1. Simpan foto teroptimasi di `assets/web/pengurus/`.
+2. Ganti `src="assets/web/pengurus/<nama>.svg"` pada anggota terkait, lalu hapus
+   file SVG lamanya.
 3. Isi atribut `alt` dengan nama lengkap.
 4. Pertahankan rasio foto persegi agar pemotongan lingkaran tetap rapi.
 

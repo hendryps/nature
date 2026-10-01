@@ -36,7 +36,7 @@ build. Seluruh source dapat diedit langsung.
 |   `-- web/
 |       |-- logo-nature.webp
 |       |-- nature-toba.webp
-|       `-- photo-dummy.svg
+|       `-- pengurus/        # avatar sementara, satu per orang
 |-- css/
 |   `-- style.css
 |-- js/
@@ -62,8 +62,9 @@ tautan dan aset sama dengan production.
 - Logo, hero, dan foto pengurus: `assets/web/`
 - Konfigurasi deployment dan header: `vercel.json`
 
-Foto pengurus saat ini menggunakan `assets/web/photo-dummy.svg`. Saat foto asli
-tersedia, simpan hasil optimasi di `assets/web/`, ubah atribut `src`, lalu isi
+Foto pengurus saat ini menggunakan avatar ilustrasi sementara di
+`assets/web/pengurus/<nama>.svg`. Saat foto asli tersedia, simpan hasil optimasi
+di folder yang sama, ubah atribut `src`, hapus SVG lamanya, lalu isi
 atribut `alt` dengan nama orang yang bersangkutan.
 
 ## Kontak Resmi

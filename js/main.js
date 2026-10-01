@@ -17,6 +17,10 @@ registrationLinks.forEach((link) => {
   link.href = registrationUrl;
 });
 
+// Mengisi tahun hak cipta di footer secara otomatis sesuai tahun berjalan.
+const currentYear = document.querySelector('#currentYear');
+if (currentYear) currentYear.textContent = new Date().getFullYear();
+
 // Mengambil elemen yang akan diberi interaksi.
 const navigation = document.querySelector('#mainNav');
 const backToTopButton = document.querySelector('#backToTop');
